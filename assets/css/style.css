@@ -1,0 +1,232 @@
+/* font-family: 'Lato', sans-serif;
+font-family: 'Raleway', sans-serif; */
+
+
+/**
+1. DARK 262534
+2. Nrml 3f3d56
+3. Accent 6c63ff
+4. Gray One d6d4ff
+5. Gray 2 f1f0ff
+**/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lato', sans-serif;
+}
+
+
+/**  Start Header **/
+
+
+/** Add the opacity to the image only: https://css-tricks.com/snippets/css/transparent-background-images/**/
+
+#header {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 60px 12px;
+}
+
+#header::after {
+    content: "";
+    background-image: url('/assets/Images/header.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 20%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+header nav {
+    width: 100%;
+}
+
+
+/** Start Intro**/
+
+#Intro {
+    /* background-color: rgba(63, 61, 86, 70%); */
+    /* background: linear-gradient(to bottom, #3f3d56, #262534 100%); */
+}
+
+#Intro h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: #262534;
+    /* text-shadow: 2px 2px #6c63ff; */
+}
+
+#Intro h3 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #262534;
+}
+
+#Intro .name {
+    /* color: #3f3d56; */
+}
+
+#Intro #view-more {
+    background-color: #E87E04;
+    color: white;
+    font-size: 18px;
+    padding: 15px 46px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    opacity: 1;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+#Intro #view-more:hover {
+    background-color: #F9690E;
+}
+
+#Intro #view-more i {
+    margin-left: 12px;
+    font-size: 16px;
+}
+
+
+/* Start Nav  */
+
+header nav {
+    width: 100%;
+    /* height: 200px; */
+    background-color: #262534;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 10vh;
+    /* padding: 20px 0px; */
+}
+
+header .nav-item {
+    display: inline;
+    margin: 0 8px;
+}
+
+header .nav-item:first-of-type {
+    margin-left: 48px;
+}
+
+header .nav-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header .nav-item a:hover {
+    text-decoration: underline;
+}
+
+header .nav-item a:last-of-type:hover {
+    text-decoration: none;
+}
+
+header .nav-item a.active {
+    text-decoration: underline;
+    color: #F9690E;
+}
+
+
+/** Start More Drop Down**/
+
+#more-drop-down-menu {
+    margin-left: 8px;
+}
+
+header nav #more-drop-down-menu i {
+    margin-left: 8px;
+    vertical-align: bottom;
+}
+
+#dropdown-wrapper-more {
+    display: inline-block;
+    position: relative;
+}
+
+header nav #dropdown-more {
+    width: 150px;
+    border-top: 2px solid #6c63ff;
+    background-color: #262534;
+    box-shadow: 0 2px 5px #3f3d56;
+    padding: 20px;
+    position: absolute;
+    left: 8px;
+    /* top: 22px; */
+    display: none;
+}
+
+header nav #dropdown-more li {
+    list-style: none;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #3f3d56;
+    cursor: pointer;
+}
+
+header nav #dropdown-more li a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav #dropdown-more li a:hover {
+    border-bottom: 1px solid #6c63ff;
+}
+
+#dropdown-wrapper-more:hover #dropdown-more {
+    display: block;
+}
+
+
+/** End More Drop Down**/
+
+
+/* End Nav */
+
+
+/**  END Header **/
+
+
+/************************** Start Menu **********************/
+
+
+/**
+1. DARK 262534
+2. Nrml 3f3d56
+3. Accent 6c63ff
+4. Gray One d6d4ff
+5. Gray 2 f1f0ff
+**/
+
+#About {
+    width: 100%;
+    height: 100vh;
+}
+
+
+/************************** End Menu **********************/

@@ -208,18 +208,131 @@ header nav #dropdown-more li a:hover {
 /************************** Start Menu **********************/
 
 
+/********* Start About ********/
+
+#about {
+    width: 100%;
+    height: 100vh;
+    padding: 0 8%;
+    display: grid;
+    grid-template-areas: 'header header' 'shrotIntro skills';
+    grid-template-columns: 45% 55%;
+}
+
+#aboutTitle {
+    margin-top: 45px;
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#aboutTitle h3 {
+    font-size: 46px;
+    color: #262534;
+    margin-bottom: 8px;
+}
+
+#aboutTitle hr {
+    border: 2px solid #6c63ff;
+    width: 300px;
+}
+
+#shortIntro {
+    text-align: center;
+    grid-area: shrotIntro;
+}
+
+#skills {
+    grid-area: skills;
+    padding: 0 20px;
+    padding-left: 32px;
+}
+
+
+/*** Start short Intro ***/
+
+#shortIntroImg img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 2px 0px 2px gray;
+    margin-bottom: 25px;
+}
+
+#shortIntroText h4 {
+    font-size: 32px;
+    color: #2d3436;
+    margin-bottom: 8px;
+}
+
+#shortIntroText p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    color: #2d3436;
+}
+
+
+/*** End short Intro ***/
+
+
+/** Start Skills Bars **/
+
+.progress-wrapper {
+    height: 30px;
+    display: grid;
+    grid-template-columns: 18% 72% 10%;
+    background-color: #fefefe;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 24px;
+}
+
+.skillName,
+.progress-bar,
+.SkillPercent {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
 /**
 1. DARK 262534
 2. Nrml 3f3d56
 3. Accent 6c63ff
 4. Gray One d6d4ff
 5. Gray 2 f1f0ff
+6. Dark gray #2d3436;
 **/
 
-#About {
-    width: 100%;
-    height: 100vh;
+.skillName {
+    /* background-color: #3f3d56; */
+    padding-left: 5px;
+    color: #2d3436;
 }
+
+.SkillPercent {
+    padding-left: 10px;
+    color: #2d3436;
+}
+
+.progress {
+    background: #6c63ff;
+    height: 30px;
+    width: 0;
+    /* transition: width 0.5s ease-in; */
+}
+
+
+/** End Skills Bars **/
+
+
+/********* End About ********/
 
 
 /************************** End Menu **********************/

@@ -91,7 +91,7 @@ h6 {
     font-weight: bold;
     opacity: 1;
     border: 2px solid white;
-    cursor: pointer;
+    text-decoration: none;
 }
 
 #Intro #view-more:hover {

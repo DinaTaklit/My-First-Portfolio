@@ -60,10 +60,6 @@ h6 {
     z-index: -1;
 }
 
-header nav {
-    width: 100%;
-}
-
 
 /** Start Intro**/
 
@@ -116,6 +112,7 @@ header nav {
     background-color: #262534;
     display: grid;
     align-items: center;
+    border-bottom: 4px solid #F9690E;
 }
 
 header .nav-item {
@@ -199,6 +196,41 @@ header nav #dropdown-more li a:hover {
 /** End More Drop Down**/
 
 
+/** Stick the nav in the top after scrolling**/
+
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+
+header nav.sticky {
+    /** Let us add some animation hh**/
+    animation: slide-down 0.7s;
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+
+menu {
+    padding-top: 80px;
+}
+
+
 /* End Nav */
 
 
@@ -253,8 +285,8 @@ header nav #dropdown-more li a:hover {
 /*** Start short Intro ***/
 
 #shortIntroImg img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     box-shadow: 2px 0px 2px gray;
     margin-bottom: 25px;
@@ -300,16 +332,6 @@ header nav #dropdown-more li a:hover {
     font-weight: 600;
 }
 
-
-/**
-1. DARK 262534
-2. Nrml 3f3d56
-3. Accent 6c63ff
-4. Gray One d6d4ff
-5. Gray 2 f1f0ff
-6. Dark gray #2d3436;
-**/
-
 .skillName {
     /* background-color: #3f3d56; */
     padding-left: 5px;
@@ -330,6 +352,16 @@ header nav #dropdown-more li a:hover {
 
 
 /** End Skills Bars **/
+
+
+/**
+1. DARK 262534
+2. Nrml 3f3d56
+3. Accent 6c63ff
+4. Gray One d6d4ff
+5. Gray 2 f1f0ff
+6. Dark gray #2d3436;
+**/
 
 
 /********* End About ********/

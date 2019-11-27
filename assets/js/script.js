@@ -28,6 +28,26 @@ viewMoreBtn.addEventListener('mouseout', function() {
     viewMoreBtn.lastChild.classList.add('fa-arrow-right');
 });
 /** End Btn more Script **/
+/** Start Nav Script **/
+// When the user scrolls the page, execute stckNav function
+window.onscroll = function() { stickNav() };
+// Get the nav
+var headerNav = document.querySelector("header nav");
+console.log(headerNav)
+    // Get the offset position of the navbar
+var sticky = headerNav.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function stickNav() {
+    if (window.pageYOffset > sticky) {
+        headerNav.classList.add("sticky");
+    } else {
+        headerNav.classList.remove("sticky");
+    }
+}
+/** End Nav Script **/
+
+
 /*******************  End Home Script *********************/
 
 /*******************  Start About Script *********************/
@@ -65,8 +85,7 @@ function createSkill(skillName, percent) {
     // We append the created element to the skillsElement
     skillsElement.appendChild(skillElement.firstChild);
 }
-/*******************  End About Script *********************/
-
+// Color the percentage Item According to the giving percentage
 const progress_bars = document.querySelectorAll('.progress');
 var i = 0;
 progress_bars.forEach(bar => {
@@ -77,3 +96,4 @@ progress_bars.forEach(bar => {
     }, 1000);
     //i++;
 });
+/*******************  End About Script *********************/

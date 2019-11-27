@@ -33,11 +33,12 @@ viewMoreBtn.addEventListener('mouseout', function() {
 window.onscroll = function() { stickNav() };
 // Get the nav
 var headerNav = document.querySelector("header nav");
-console.log(headerNav)
-    // Get the offset position of the navbar
+// Get the offset position of the navbar
 var sticky = headerNav.offsetTop;
 
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+// Add the sticky class to the header when you reach its scroll position.Remove "sticky"
+// when you leave the scroll position
+
 function stickNav() {
     if (window.pageYOffset > sticky) {
         headerNav.classList.add("sticky");
@@ -45,6 +46,52 @@ function stickNav() {
         headerNav.classList.remove("sticky");
     }
 }
+
+/** Start Change the active nav link according to the section **/
+// Get all the sections, the header and it is hight
+var sections = $('.section'),
+    nav = $('header nav'),
+    nav_height = nav.outerHeight();
+
+// This function change the active link according to position of the scroll     
+$(window).on('scroll', function() {
+    // Get the current position
+    var cur_pos = $(this).scrollTop();
+    // change the active link according to section
+    sections.each(function() {
+        // get the start and the end position of each section
+        var top = $(this).offset().top - nav_height,
+            bottom = top + $(this).outerHeight();
+        // Check if the current position is withing one of the section in the sections array 
+        if (cur_pos >= top && cur_pos <= bottom) {
+            // If the current position is withing the area of this section then update the link :).
+            // Remove the class nav from all items
+            nav.find('.nav-item a').removeClass('active');
+            // sections.removeClass('active');
+            // Ad the active class only to the link which is active :D.
+            $(this).addClass('active');
+            nav.find('.nav-item a[href="#' + $(this).attr('id') + '"]').addClass('active');
+        }
+    });
+});
+// Add some animation once we clik on the link: scroll up slowly :) .
+nav.find('.nav-item a').on('click', function() {
+    var $el = $(this),
+        id = $el.attr('href');
+
+    $('html, body').animate({
+        scrollTop: $(id).offset().top - nav_height
+    }, 500);
+
+    return false;
+});
+
+
+
+
+/** End Change the active nav link according to the section **/
+
+
 /** End Nav Script **/
 
 

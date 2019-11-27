@@ -48,7 +48,7 @@ h6 {
 
 #header::after {
     content: "";
-    background-image: url('/assets/Images/header.svg');
+    background-image: url('assets/Images/header.svg');
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 20%;

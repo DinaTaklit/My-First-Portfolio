@@ -144,7 +144,7 @@ header .nav-item a:hover {
     text-decoration: underline;
 }
 
-header .nav-item a:last-of-type:hover {
+header #more-drop-down-menu a:last-of-type:hover {
     text-decoration: none;
 }
 

@@ -135,9 +135,9 @@ function createSkill(skillName, percent) {
         '<div class="progress-wrapper">' +
         '<div class="skillName">' + skillName + '</div>' +
         '<div class="progress-bar">' +
-        '<div data-size="' + percent + '" class="progress w3-blue"></div>' +
+        '<div data-size="' + percent + '" class="progress w3-blue"> <p>' + percent + '%</p></div>' +
         '</div>' +
-        '<div class="SkillPercent">' + percent + '%</div>' +
+        // '<div class="SkillPercent">' + percent + '%</div>' +
         '</div>'
     skillElement.innerHTML = skillString;
     // We append the created element to the skillsElement

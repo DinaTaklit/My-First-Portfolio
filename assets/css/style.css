@@ -1,16 +1,6 @@
-/* font-family: 'Lato', sans-serif;
-font-family: 'Raleway', sans-serif; */
-
-
-/**
-1. DARK 262534
-2. Nrml 3f3d56
-3. Accent 6c63ff
-4. Gray One d6d4ff
-5. Gray 2 f1f0ff
-**/
-
-* {
+*,
+*:before,
+*:after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -37,13 +27,14 @@ h6 {
 
 #header {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     position: relative;
     text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: flex-end;
-    padding: 60px 12px;
+    padding: 60px 16px;
 }
 
 #header::after {
@@ -85,7 +76,7 @@ h6 {
     background-color: #E87E04;
     color: white;
     font-size: 18px;
-    padding: 15px 46px;
+    padding: 15px 42px;
     border-radius: 8px;
     text-align: center;
     font-weight: bold;
@@ -108,29 +99,35 @@ h6 {
 
 header nav {
     width: 100%;
-    height: 10vh;
+    height: 8vh;
     background-color: #262534;
     display: grid;
     align-items: center;
     border-bottom: 4px solid #F9690E;
 }
 
-header .nav-item {
-    display: inline;
+header nav ul {
+    list-style-type: none;
+    background-color: #262534;
+}
+
+header li.nav-item {
+    display: inline-block;
     margin: 0 8px;
+    position: relative;
 }
 
-header .nav-item:first-of-type {
-    margin-left: 48px;
+header li.nav-item:first-of-type {
+    margin-left: 24px;
 }
 
-header .nav-item a {
+header li.nav-item a {
     color: white;
     text-decoration: none;
     font-size: 16px;
 }
 
-header .nav-item a:hover {
+header li.nav-item a:hover {
     text-decoration: underline;
 }
 
@@ -146,21 +143,17 @@ header .nav-item a.active {
 
 /** Start More Drop Down**/
 
-#more-drop-down-menu {
-    margin-left: 8px;
-}
-
 header nav #more-drop-down-menu i {
     margin-left: 8px;
     vertical-align: bottom;
 }
 
-#dropdown-wrapper-more {
-    display: inline-block;
-    position: relative;
+header li.nav-item ul {
+    display: none;
 }
 
-header nav #dropdown-more {
+header li.nav-item:hover ul {
+    display: block;
     width: 150px;
     border-top: 2px solid #6c63ff;
     background-color: #262534;
@@ -168,15 +161,22 @@ header nav #dropdown-more {
     padding: 20px;
     position: absolute;
     left: 8px;
-    /* top: 22px; */
-    display: none;
 }
 
-header nav #dropdown-more li {
+header li.nav-item:hover ul li {
+    display: block;
     list-style: none;
     margin-bottom: 12px;
     border-bottom: 1px solid #3f3d56;
-    cursor: pointer;
+}
+
+header li.nav-item:hover ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+header li.nav-item:hover ul li a:hover {
+    border-bottom: 1px solid #6c63ff;
 }
 
 header nav #dropdown-more li a {
@@ -357,6 +357,23 @@ menu {
 /** End Skills Bars **/
 
 
+/********* End About ********/
+
+
+/********* Start  Project ********/
+
+#projects {
+    width: 100%;
+    height: 100vh;
+}
+
+
+/********* End  Project ********/
+
+
+/************************** End Menu **********************/
+
+
 /**
 1. DARK 262534
 2. Nrml 3f3d56
@@ -367,7 +384,13 @@ menu {
 **/
 
 
-/********* End About ********/
+/************** Start Responsive part ****************/
 
 
-/************************** End Menu **********************/
+/************** Start Home page *********************/
+
+
+/************** End Home page **********************/
+
+
+/************** End Responsive part ****************/

@@ -11,7 +11,15 @@ function printLetterByLetter(destination, message, speed) {
     }, speed);
 }
 var spanName = document.querySelector("#Intro span.name");
-printLetterByLetter(spanName, "Dina TAKLIT", 200);
+if (screen.width > 600) {
+    printLetterByLetter(spanName, "Dina TAKLIT", 200);
+} else {
+    spanName.innerHTML = "Dina TAKLIT";
+}
+
+
+
+//printLetterByLetter(spanName, "Dina TAKLIT", 200);
 /** END Show the name Script **/
 
 /** Start Btn more Script **/
@@ -53,7 +61,8 @@ var sections = $('.section'),
     nav = $('header nav'),
     nav_height = nav.outerHeight();
 
-// This function change the active link according to position of the scroll     
+// This function change the active link according to position of the scroll  
+//function changActiveOnScroll() {
 $(window).on('scroll', function() {
     // Get the current position
     var cur_pos = $(this).scrollTop();
@@ -62,6 +71,7 @@ $(window).on('scroll', function() {
         // get the start and the end position of each section
         var top = $(this).offset().top - nav_height,
             bottom = top + $(this).outerHeight();
+        // bottom = top + $(this).outerHeight();
         // Check if the current position is withing one of the section in the sections array 
         if (cur_pos >= top && cur_pos <= bottom) {
             // If the current position is withing the area of this section then update the link :).
@@ -74,24 +84,25 @@ $(window).on('scroll', function() {
         }
     });
 });
+//}
+
+
 // Add some animation once we clik on the link: scroll up slowly :) .
+//function changActiveOnClick() {
 nav.find('.nav-item a').on('click', function() {
     var $el = $(this),
         id = $el.attr('href');
 
     $('html, body').animate({
-        scrollTop: $(id).offset().top - nav_height
+        scrollTop: $(id).offset().top //- nav_height
     }, 500);
 
     return false;
 });
-
-
+//}
 
 
 /** End Change the active nav link according to the section **/
-
-
 /** End Nav Script **/
 
 

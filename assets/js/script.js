@@ -11,7 +11,7 @@ function printLetterByLetter(destination, message, speed) {
     }, speed);
 }
 var spanName = document.querySelector("#Intro span.name");
-printLetterByLetter(spanName, "Dina TAKLIT", 100);
+printLetterByLetter(spanName, "Dina TAKLIT", 200);
 /** END Show the name Script **/
 
 /** Start Btn more Script **/

@@ -243,6 +243,31 @@ menu {
 /************************** Start Menu **********************/
 
 
+/** Start Section header: common**/
+
+.section-header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.section-header h3 {
+    font-size: 46px;
+    color: #262534;
+    margin-bottom: 12px;
+}
+
+.section-header hr {
+    border: 2px solid #6c63ff;
+    width: 300px;
+}
+
+
+/*** End Section header ***/
+
+
 /********* Start About ********/
 
 #about {
@@ -253,25 +278,6 @@ menu {
     grid-template-areas: 'header header' 'shrotIntro skills';
     grid-template-columns: 45% 55%;
     column-gap: 24px;
-}
-
-#aboutTitle {
-    grid-area: header;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 32px;
-}
-
-#aboutTitle h3 {
-    font-size: 46px;
-    color: #262534;
-    margin-bottom: 12px;
-}
-
-#aboutTitle hr {
-    border: 2px solid #6c63ff;
-    width: 300px;
 }
 
 #shortIntro {
@@ -374,7 +380,94 @@ menu {
 #projects {
     width: 100%;
     height: 100vh;
+    background-color: #F4F4F4;
 }
+
+
+/** Start Tabs **/
+
+.tab-container {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 10px;
+    position: relative;
+}
+
+#projects input,
+.tab-content {
+    clear: both;
+    padding-top: 10px;
+    display: none;
+}
+
+#projects label {
+    font-weight: 700;
+    font-size: 18px;
+    display: block;
+    float: left;
+    width: 20%;
+    padding: 0.5em 1.5em;
+    color: #757575;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    background-color: #F4F4F4;
+    /* background: #f0f0f0; */
+}
+
+#tab1:checked~#all,
+#tab2:checked~#templates {
+    display: block;
+    padding: 20px;
+    background: #fff;
+    color: #999;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.tab-container [id^="tab"]:checked+label {
+    background: #fff;
+    box-shadow: inset 0 -3px #F9690E;
+    /* box-shadow: inset 0 -3px #0CE; */
+}
+
+
+/** End Tabs **/
+
+
+/** Start All content **/
+
+#project-card-wrapper {
+    width: 100%;
+    display: grid;
+}
+
+#project-card-img1 {
+    width: 150px;
+    height: 150px;
+    background-image: url('/assets/Images/alaskanPortfilio.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/** End All content **/
+
+
+/**
+Alll links 
+https://dinataklit.github.io/Responsive-Beautiful-Alaskan-Photo-Portfolio/
+
+https://dinataklit.github.io/Simple-Template-Using-GridLayout/
+
+https://dinataklit.github.io/Responsive-Grid-Using-Flex-Layout/
+
+https://dinataklit.github.io/Simple-HTML-Trip-Template/index.html
+
+dinataklit.github.io/Vegan-Store-Simple-Website-Template/
+
+https://dinataklit.github.io/WebSiteWithPureHTML_CSS/
+**/
 
 
 /********* End  Project ********/
@@ -390,6 +483,7 @@ menu {
 4. Gray One d6d4ff
 5. Gray 2 f1f0ff
 6. Dark gray #2d3436;
+7. Orange F9690E
 **/
 
 

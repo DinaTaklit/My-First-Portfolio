@@ -155,3 +155,6 @@ progress_bars.forEach(bar => {
     //i++;
 });
 /*******************  End About Script *********************/
+
+/*******************  Start Project Script *********************/
+/*******************  End Project Script *********************/

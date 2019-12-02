@@ -476,10 +476,11 @@ menu {
     position: relative;
 }
 
-#project-card-img1,
+
+/* #project-card-img1,
 #project-card-img2 {
     background-image: url('/assets/Images/alaskanPortfilio.PNG');
-}
+} */
 
 .project-card-hover {
     background: -webkit-linear-gradient(180deg, rgb(244, 244, 244, 0.95), rgb(255, 255, 255, 0.9));
@@ -511,22 +512,6 @@ menu {
 
 
 /** End All content **/
-
-
-/**
-Alll links 
-https://dinataklit.github.io/Responsive-Beautiful-Alaskan-Photo-Portfolio/
-
-https://dinataklit.github.io/Simple-Template-Using-GridLayout/
-
-https://dinataklit.github.io/Responsive-Grid-Using-Flex-Layout/
-
-https://dinataklit.github.io/Simple-HTML-Trip-Template/index.html
-
-dinataklit.github.io/Vegan-Store-Simple-Website-Template/
-
-https://dinataklit.github.io/WebSiteWithPureHTML_CSS/
-**/
 
 
 /********* End  Project ********/

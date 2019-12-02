@@ -237,10 +237,10 @@ createPrjContent(jsTab, jsCards, 'jsImg');
 
 
 // Create all the project related to the all tab 
-var allLinks = tempLinks.concat(jsLinks);
-var allImgs = tempImgs.concat(jsImgs);
-// Create Js cards 
-var allCards = createPrjCardObjs(allImgs, allLinks);
-allTab = document.querySelector('#all');
-createPrjContent(allTab, allCards, 'allImg');
+// var allLinks = tempLinks.concat(jsLinks);
+// var allImgs = tempImgs.concat(jsImgs);
+// // Create Js cards 
+// var allCards = createPrjCardObjs(allImgs, allLinks);
+// allTab = document.querySelector('#all');
+// createPrjContent(allTab, allCards, 'allImg');
 /*******************  End Project Script *********************/

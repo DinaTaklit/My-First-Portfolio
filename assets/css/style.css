@@ -416,9 +416,12 @@ menu {
 }
 
 #tab1:checked~#all,
-#tab2:checked~#templates {
+#tab2:checked~#templates,
+#tab3:checked~#js {
     /* display: block; */
     display: grid;
+    height: 520px;
+    overflow-x: hidden;
     grid-template-columns: repeat(3, auto);
     padding: 20px;
     /* background: #fff; */

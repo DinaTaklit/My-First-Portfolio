@@ -159,48 +159,33 @@ progress_bars.forEach(bar => {
 
 /*******************  Start Project Script *********************/
 
-// All the links of the websites 
-var projLinks = ['https://dinataklit.github.io/Responsive-Beautiful-Alaskan-Photo-Portfolio/',
-    'https://dinataklit.github.io/Simple-Template-Using-GridLayout/',
-    'https://dinataklit.github.io/Responsive-Grid-Using-Flex-Layout/',
-    'https://dinataklit.github.io/Simple-HTML-Trip-Template/index.html',
-    'https://dinataklit.github.io/Vegan-Store-Simple-Website-Template/',
-    'https://dinataklit.github.io/WebSiteWithPureHTML_CSS/'
-];
-
-// All the images responding to the link list 
-var projImgs = ['alaskanPortfilio.PNG',
-    'movies.PNG',
-    'edyoda.PNG',
-    'trip.PNG',
-    'vegan.PNG',
-    'purePort.PNG'
-];
-
 // Create a card object
 function prjCard(id, prjImgName, prjLink) {
     this.id = id;
     this.prjImgName = prjImgName;
     this.prjLink = prjLink;
 }
-var projCards = [];
+
 // Create the card obj
-function createPrjCardObjs() {
+function createPrjCardObjs(imgs, links) {
     // Create all the cards 
-    for (var i = 0; i < projImgs.length; i++) {
-        var card = new prjCard(i + 1, projImgs[i], projLinks[i]);
+    var projCards = [];
+    for (var i = 0; i < imgs.length; i++) {
+        var card = new prjCard(i + 1, imgs[i], links[i]);
         projCards[i] = card;
     }
+    return projCards;
 }
+
 // Create the html card and put them in the given tab
-function createPrjContent(destination, cards) {
+function createPrjContent(destination, cards, divImgId) {
     // Create each project card ana append it to the tab destination
-    for (var i = 0; i < projImgs.length; i++) {
+    for (var i = 0; i < cards.length; i++) {
         // create the card using innerHTML.
         var cardElement = document.createElement('div');
         var cardString =
             '<div class="project-card-wrapper">' +
-            '<div id="project-card-img' + cards[i].id + '" class="project-card-img">' +
+            '<div id="' + divImgId + '' + cards[i].id + '" class="project-card-img">' +
             '</div>' +
             '<div class="project-card-hover">' +
             '<a href="' + cards[i].prjLink + '" target="_blank">' +
@@ -212,16 +197,50 @@ function createPrjContent(destination, cards) {
         cardElement.innerHTML = cardString;
         destination.appendChild(cardElement.firstChild);
         // Set the background image url 
-        cardImg = document.querySelector('#project-card-img' + cards[i].id);
+        cardImg = document.querySelector('#' + divImgId + cards[i].id);
         cardImg.style.backgroundImage = 'url(/assets/Images/' + cards[i].prjImgName + ')';
         console.log(cardImg);
         //console.log(cardElement);
     }
 
 }
-createPrjCardObjs();
 // Create all the project related to the templates tab 
-templatesTab = document.querySelector('#templates');
-createPrjContent(templatesTab, projCards);
+// All the links of the templates websites 
+var tempLinks = ['https://dinataklit.github.io/Responsive-Beautiful-Alaskan-Photo-Portfolio/',
+    'https://dinataklit.github.io/Simple-Template-Using-GridLayout/',
+    'https://dinataklit.github.io/Responsive-Grid-Using-Flex-Layout/',
+    'https://dinataklit.github.io/Simple-HTML-Trip-Template/index.html',
+    'https://dinataklit.github.io/Vegan-Store-Simple-Website-Template/',
+    'https://dinataklit.github.io/WebSiteWithPureHTML_CSS/'
+];
 
+// All the images responding to the template link list 
+var tempImgs = ['alaskanPortfilio.PNG',
+    'movies.PNG',
+    'edyoda.PNG',
+    'trip.PNG',
+    'vegan.PNG',
+    'purePort.PNG'
+];
+// create template cards 
+var tempCards = createPrjCardObjs(tempImgs, tempLinks);
+templatesTab = document.querySelector('#templates');
+createPrjContent(templatesTab, tempCards, 'tempImg');
+
+// Create all the project related to the js tab 
+var jsLinks = ['https://codepen.io/ZinaTaklit/full/QWWEYrJ'];
+var jsImgs = ['gameCard.PNG'];
+// Create Js cards 
+var jsCards = createPrjCardObjs(jsImgs, jsLinks);
+jsTab = document.querySelector('#js');
+createPrjContent(jsTab, jsCards, 'jsImg');
+
+
+// Create all the project related to the all tab 
+var allLinks = tempLinks.concat(jsLinks);
+var allImgs = tempImgs.concat(jsImgs);
+// Create Js cards 
+var allCards = createPrjCardObjs(allImgs, allLinks);
+allTab = document.querySelector('#all');
+createPrjContent(allTab, allCards, 'allImg');
 /*******************  End Project Script *********************/

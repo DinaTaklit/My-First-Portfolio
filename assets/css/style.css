@@ -224,7 +224,11 @@ header nav.sticky {
 }
 
 
-/*** Set the active bar ****/
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+
+menu {
+    padding-top: 2px;
+}
 
 
 /* End Nav */

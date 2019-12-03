@@ -198,7 +198,7 @@ function createPrjContent(destination, cards, divImgId) {
         destination.appendChild(cardElement.firstChild);
         // Set the background image url 
         cardImg = document.querySelector('#' + divImgId + cards[i].id);
-        cardImg.style.backgroundImage = 'url(../../assets/Images/' + cards[i].prjImgName + ')';
+        cardImg.style.backgroundImage = 'url(./assets/Images/' + cards[i].prjImgName + ')';
         console.log(cardImg);
         //console.log(cardElement);
     }

@@ -580,6 +580,10 @@ footer {
 }
 
 #footer-contacts i {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    vertical-align: center;
     color: rgb(84, 84, 84);
     border: 2px solid rgb(84, 84, 84);
     border-radius: 50%;

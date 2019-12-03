@@ -507,19 +507,124 @@ menu .section-header {
 /********* End  Project ********/
 
 
+/**** Start Contact Section ****/
+
+#contact {
+    height: 80vh;
+}
+
+#contact-form {
+    width: 80%;
+    max-width: 600px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#contact-form input,
+#contact-comment {
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 3px;
+    background-color: #262534;
+    border: none;
+    font-size: 18px;
+    color: #d6d4ff;
+}
+
+form #contact-submit {
+    background-color: #E87E04;
+    width: 30%;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+form #contact-submit:hover {
+    background-color: #F9690E;
+}
+
+
+/**** END Contact Section *****/
+
+
 /************************** End Menu **********************/
 
 
-/**
-1. DARK 262534
-2. Nrml 3f3d56
-3. Accent 6c63ff
-4. Gray One d6d4ff
-5. Gray 2 f1f0ff
-6. Dark gray #2d3436;
-7.1 orange #E87E04;
-7. Orange hover F9690E
-**/
+/************************ Start Footer ********************/
+
+footer {
+    width: 100%;
+    height: 35vh;
+    background-color: rgb(244, 244, 244);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer-carret-top {
+    padding: 6px 16px;
+    position: absolute;
+    font-size: 36px;
+    color: white;
+    top: -3px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #6c63ff;
+}
+
+#footer-contacts {
+    padding-top: 24px;
+}
+
+#footer-contacts i {
+    color: rgb(84, 84, 84);
+    border: 2px solid rgb(84, 84, 84);
+    border-radius: 50%;
+    padding: 16px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+#footer-contacts i:hover {
+    color: white;
+    border: none;
+}
+
+#footer-contacts .fa-facebook-f:hover {
+    background-color: #3B5998;
+}
+
+#footer-contacts .fa-linkedin-in:hover {
+    background-color: #0077b5;
+}
+
+#footer-contacts .fa-quora:hover {
+    background-color: #b92b27;
+}
+
+#footer-contacts .fa-stack-overflow:hover {
+    background-color: #f48024;
+}
+
+#footer-contacts .fa-github-alt:hover {
+    background-color: #24292e;
+}
+
+#footer-contacts .fa-codepen:hover {
+    background-color: #000;
+}
+
+footer p {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+
+/************************  End Footer  *******************/
 
 
 /************** Start Responsive part ****************/
@@ -605,6 +710,17 @@ li.icon-nav {
         font-size: 28px;
     }
     /************** END Project page *********************/
+    /************************ Start Footer ******************/
+    footer {
+        height: 40vh;
+    }
+    #footer-contacts {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 4px;
+        row-gap: 4px;
+    }
+    /************************ END Footer *****************/
 }
 
 
@@ -639,7 +755,7 @@ li.icon-nav {
     /************** End Home page **********************/
     /************** Start About page **********************/
     #about {
-        height: 110vh;
+        height: 100vh;
         display: flex;
         flex-direction: column;
     }
@@ -670,7 +786,7 @@ li.icon-nav {
     /************** Start Project page *********************/
     #projects {
         margin-top: 10px;
-        height: 94vh;
+        height: 95vh;
     }
     #tab2:checked~#templates,
     #tab3:checked~#js {
@@ -680,11 +796,11 @@ li.icon-nav {
         grid-template-columns: repeat(1, auto);
     }
     .project-card-wrapper {
-        height: 520px;
+        height: 500px;
         overflow: hidden;
     }
     .project-card-img {
-        height: 520px;
+        height: 500px;
     }
     .project-card-hover {
         font-size: 36px;
@@ -696,7 +812,41 @@ li.icon-nav {
         text-align: left;
     }
     /************** END Project page *********************/
+    /************** Start Contact page *********************/
+    #contact-form {
+        width: 90%;
+        max-width: 700px;
+    }
+    /************** END Contact page *********************/
+}
+
+@media(max-width: 400px) {
+    /************** Start About page *********************/
+    #about {
+        height: 110vh;
+        display: flex;
+        flex-direction: column;
+    }
+    /************** Start About page *********************/
+    /************** Start Project page *********************/
+    #projects {
+        margin-top: 10px;
+        height: 120vh;
+    }
+    /************** END Project page *********************/
 }
 
 
 /************** End Responsive part ****************/
+
+
+/** Color Used 
+1. DARK 262534
+2. Nrml 3f3d56
+3. Accent 6c63ff
+4. Gray One d6d4ff
+5. Gray 2 f1f0ff
+6. Dark gray #2d3436;
+7.1 orange #E87E04;
+7. Orange hover F9690E
+**/

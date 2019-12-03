@@ -641,6 +641,7 @@ li.icon-nav {
     margin-right: 12px;
     display: none;
     padding-bottom: 12px;
+    cursor: pointer;
 }
 
 @media(max-width: 700px) {
@@ -754,6 +755,9 @@ li.icon-nav {
         display: block;
         padding-left: 14px;
         font-size: 18px;
+    }
+    #toggleButton:checked~li.nav-item>a[href="#home"] {
+        margin-top: 20px;
     }
     /************** End Home page **********************/
     /************** Start About page **********************/
